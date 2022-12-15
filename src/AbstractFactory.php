@@ -88,6 +88,7 @@ abstract class AbstractFactory
      * registering factories which they are not gonna access themself at all, and thus minimized configuration.
      *
      * @psalm-suppress UnsafeInstantiation
+     * @psalm-suppress InvalidStringClass
      */
     protected function retrieveDependency(
         ContainerInterface $container,

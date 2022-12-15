@@ -143,7 +143,7 @@ class ConfigurationFactory extends AbstractFactory
     /** @param callable(CacheItemPoolInterface):void $setCacheOnConfiguration */
     private function processCacheImplementation(
         Configuration $configuration,
-        Cache|CacheItemPoolInterface $cache,
+        Cache | CacheItemPoolInterface $cache,
         callable $setCacheOnConfiguration,
     ): void {
         if ($cache instanceof Cache) {

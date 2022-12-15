@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<psalm
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <directory name="src" />
+        <ignoreFiles>
+            <directory name="vendor" />
+        </ignoreFiles>
+    </projectFiles>
+    <issueHandlers>
+        <InternalClass>
+            <errorLevel type="suppress">
+                <!-- We consume AbstractFactory methods in the tests, but namespaces differ so Psalm complains -->
+                <referencedClass name="GuidoFaecke\MezzioDoctrineOdm\AbstractFactory"/>
+            </errorLevel>
+        </InternalClass>
+        <DeprecatedClass>
+            <errorLevel type="suppress">
+                <referencedClass name="Doctrine\Common\Cache\ApcuCache"/>
+                <referencedClass name="Doctrine\Common\Cache\ArrayCache"/>
+                <referencedClass name="Doctrine\Common\Cache\Cache"/>
+                <referencedClass name="Doctrine\Common\Cache\CacheProvider"/>
+                <referencedClass name="Doctrine\Common\Cache\ChainCache"/>
+                <referencedClass name="Doctrine\Common\Cache\FilesystemCache"/>
+                <referencedClass name="Doctrine\Common\Cache\MemcachedCache"/>
+                <referencedClass name="Doctrine\Common\Cache\PhpFileCache"/>
+                <referencedClass name="Doctrine\Common\Cache\PredisCache"/>
+                <referencedClass name="Doctrine\Common\Cache\RedisCache"/>
+                <referencedClass name="Doctrine\Common\Cache\WinCacheCache"/>
+                <referencedClass name="Doctrine\Common\Cache\ZendDataCache"/>
+                <referencedClass name="Doctrine\Common\Annotations\CachedReader"/>
+                <referencedClass name="Doctrine\Persistence\Mapping\Driver\AnnotationDriver"/>
+            </errorLevel>
+        </DeprecatedClass>
+    </issueHandlers>
+</psalm>

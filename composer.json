@@ -1,0 +1,39 @@
+{
+    "name": "guidofaecke/mezzio-doctrine-odm",
+    "type": "library",
+    "description": "Doctrine ODM Factories for Mezzio",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Guido Faecke",
+            "email": "guido@faecke.us",
+            "homepage": "https://github.com/guidofaecke"
+        }
+    ],
+    "require": {
+        "php": "~8.1.0 || ~8.2.0",
+        "doctrine/cache": "^1.13",
+        "doctrine/mongodb-odm": "^2.4",
+        "psr/container": "^1.0 || ^2.0"
+    },
+    "require-dev": {
+        "doctrine/coding-standard": "^11.0",
+        "vimeo/psalm": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "GuidoFaecke\\MezzioDoctrineOdm\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "composer/package-versions-deprecated": true,
+            "ocramius/package-versions": true
+        },
+        "platform": {
+            "php": "8.1.99"
+        },
+        "sort-packages": true
+    }
+}
